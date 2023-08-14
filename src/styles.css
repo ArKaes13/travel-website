@@ -99,7 +99,7 @@ input {
     background: var(--whiteColorDeam);
     width: 100%;
     padding: 1.6rem;
-    z-index: 10;
+    z-index: 1000;
     box-shadow: 0 .2rem .4rem rgba(2, 15, 29, .242);
 }
 
@@ -132,7 +132,7 @@ input {
         left: 50%;
         padding: 1.6rem;
         transform: translate(-50%);
-        z-index: 20;
+        z-index: 2000;
         box-shadow: 0 .2rem .4rem rgba(2, 15, 29, .904);
         transition:  .5s ease-in-out;
     }
@@ -192,3 +192,161 @@ input {
 .toggleNavbar .icon:hover {
     color: var(--secondaryColor);
 }
+
+/*----------Home---------*/
+
+.home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.home .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(47, 106, 127);
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    mix-blend-mode: hard-light;
+}
+
+.home video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+}
+
+.home .homeContent {
+    width: 100%;
+    height: max-content;
+    padding: 12.8rem 2.4rem 4.8rem;
+    display: flex;
+    row-gap: 4.8rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin: auto;
+    color: var(--whiteColor);
+    z-index: 2;
+}
+
+.homeContent .textDiv {
+    padding: 3.2rem 0;
+}
+
+.textDiv .smallText {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.textDiv .homeTitle {
+    position: relative;
+    font-size: 1.8rem;
+}
+
+.cardDiv {
+    position: relative;
+    padding: 3.2rem 1.6rem;
+    background: var(--whiteColor);
+    border-radius: 1rem;
+    gap: 1.6rem;
+}
+
+.cardDiv label {
+    display: block;
+    color: var(--textColor);
+    padding: 0 0 1rem 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.cardDiv .labelTotal {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.labelTotal .total {
+    color: var(--textColor);
+    font-size: 1.8rem;
+    padding: 0 0 1rem 0;
+}
+
+.cardDiv .input {
+    height: 4rem;
+    padding: 0 1.6rem;
+    background: var(--inputColor);
+    border-radius: 4.8rem;
+}
+
+.cardDiv input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.cardDiv .icon {
+    font-size: 1.8rem;
+    color: var(--primaryColor);
+    margin: 0 0 0 1rem
+}
+
+.cardDiv .input[type=range]{
+    background: blue;
+}
+
+.cardDiv .searchOptions {
+    position: absolute;
+    background: var(--gradientColor);
+    width: max-content;
+    bottom: -1rem;
+    column-gap: 1.5rem;
+    padding: .5rem 1.6rem;
+    border-radius: 4.8rem;
+    left: 50%;
+    transform: translate(-50%);
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cardDiv .searchOptions:hover {
+    background: var(--primaryColor);
+}
+
+.cardDiv .searchOptions .icon {
+    font-size: 1.8rem;
+    color: var(--whiteColor);
+}
+
+.cardDiv .searchOptions span {
+    font-size: 1.3rem;
+}
+
+.homeFooterIcons {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.homeFooterIcons .icon {
+    font-size: 2rem;
+    margin: 0 .5rem;
+    color: var(--whiteColor);
+    font-weight: 600;
+}
+
+.homeFooterIcons .icon:hover {
+    color: var(--primaryColor);
+}
+
+
+

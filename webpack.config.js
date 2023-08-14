@@ -27,12 +27,19 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|gif)$/i,
+                use: ['url-loader']
+            },
+            {
+                test: /\.(mov|mp4)$/, 
                 use: [
                     {
-                        loader: 'url-loader',
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]'
+                        }
                     }
                 ]
-            }
+            },
         ]
     },
     plugins: [new miniCssExtractPlugin()],
