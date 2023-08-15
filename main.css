@@ -18,6 +18,7 @@
     --inputColor: rgb(239, 239, 239);
     --bodyColor: rgb(240, 240, 246);
     --cardBG: rgb(225, 225, 235);
+    --cardHover: rgb(255, 255, 255)
 }
 
 html {
@@ -347,6 +348,144 @@ input {
     color: var(--primaryColor);
 }
 
+/*----------Main---------*/
 
+.main {
+    width: 100%;
+}
+
+.secTitle .title {
+    position: relative;
+    width: max-content;
+    color: var(--textColor);
+    margin: 1.6rem 0;
+    z-index: 2;
+}
+
+.secTitle .title::after {
+    position: absolute;
+    content: '';
+    background: var(--secondaryColor);
+    height: .5rem;
+    width: 12rem;
+    right: 0;
+    bottom: .5rem;
+    z-index: -1;
+}
+
+.main .secContent {
+    justify-content: center;
+    gap: 2.4rem;
+}
+
+.secContent .singleDestination {
+    height: 100%;
+    display: grid;
+    row-gap: 1rem;
+    border-radius: 1rem;
+    align-items: center;
+    background: var(--cardBG);
+    box-shadow: 0 .2rem .4rem rgba(140, 140, 141, .549);
+    overflow: hidden;
+    padding: 1.6rem;
+}
+
+.secContent .singleDestination:hover {
+    background: var(--cardHover);
+    box-shadow: 1 .4rem .4rem rgba(85, 85, 114, .549);
+    transition: .3s ease;
+}
+
+.singleDestination .imageDiv {
+    height: 18rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 2s ease;
+}
+
+.imageDiv:hover > img {
+    transform: scale(1.1);
+}
+
+.singleDestination .cardInfo {
+    padding: 1.6rem;
+}
+
+.cardInfo .destTitle {
+    color: var(--blackColor);
+    font-size: 2rem;
+}
+
+.cardInfo .continent {
+    gap: .8rem;
+}
+
+.continent .icon {
+    color: var(--textColor);
+    font-size: 1.8rem;
+}
+
+.continent .name {
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.cardInfo .fees {
+    width: 100%;
+    justify-content: space-between;
+    padding: 1.6rem;
+    margin: 1.6rem 0;
+    border-top: .2rem solid var(--greyText);
+    border-bottom: .2rem solid var(--greyText);
+}
+
+.fees .grade {
+    color: var(--textColor);
+    max-width: 10rem;
+    line-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grade small {
+    text-align: center;
+    background: var(--gradientColor);
+    border-radius: 1.6rem;
+    color: var(--whiteColor);
+    padding: .1rem 1rem;
+    font-size: 1rem;
+}
+
+.fees .price {
+    font-size: 2rem;
+    color: var(--blackColor);
+}
+
+.cardInfo .desc {
+    font-size: 1.4rem;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+.cardInfo .btn {
+    margin: 1.6rem 0 0 0;
+    color: var(--whiteColor);
+    font-weight: 600;
+    justify-content: space-between;
+    gap: .8rem;
+}
+
+.btn .icon {
+    align-self: center;
+    font-size: 1.8rem;
+}
 
 
