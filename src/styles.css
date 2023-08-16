@@ -90,6 +90,23 @@ input {
     font-size: 100%;
 }
 
+@media screen and (min-width: 1240px) {
+    .container {
+        width: 80% !important;
+        margin: auto !important;
+    }
+
+    .section {
+        padding: 9.6rem 0 6.4rem;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body {
+        zoom: 1.7;
+    }
+}
+
 /*----------Navbar---------*/
 
 .header {
@@ -192,6 +209,56 @@ input {
 
 .toggleNavbar .icon:hover {
     color: var(--secondaryColor);
+}
+
+@media screen and (min-width: 769px) {
+    .toggleNavbar,
+    .closeNavbar {
+        display: none;
+    }
+
+    .header {
+        padding: 2.4rem 3.2rem;
+    }
+
+    .navbar .navLists {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .navItem .navLink {
+        color: var(--textColor);
+        padding: 0 .8rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .navItem .navLink:hover {
+        color: var(--primaryColor);
+    }
+
+    .navLists .btn {
+        margin: 0 0 0 1.6rem;
+    }
+
+    .navLists .btn a {
+        color: var(--whiteColor);
+        font-weight: 500;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .navLists .navItem {
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+        padding: 1.6rem 13rem;
+    }
 }
 
 /*----------Home---------*/
@@ -349,6 +416,74 @@ input {
     color: var(--primaryColor);
 }
 
+@media screen and (min-width: 500px) {
+    .textDiv .smallText {
+        font-size: 1.6rem;
+    }
+
+    .textDiv .homeTitle {
+        position: relative;
+        font-size: 3.5rem;
+        width: max-content;
+    }
+
+    .textDiv .homeTitle::after {
+        position: absolute;
+        content: '';
+        background: var(--secondaryColor);
+        height: .5rem;
+        width: 16.5rem;
+        right: 0;
+        bottom: .4rem;
+        z-index: -1;
+    }
+
+    .cardDiv {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .cardDiv {
+        padding: 3.2rem 1.6rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .home {
+        height: 85vh;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home {
+        height: 95vh;
+    }
+
+    .home .homeContent {
+        padding: 12.8rem 0 4.8rem 0;
+    }
+
+    .homeContent .cardDiv {
+        padding: 3.2rem 1.6rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardDiv .input {
+        margin-bottom: 1.6rem;
+    }
+
+    .cardDiv .searchOptions {
+        bottom: -1.6rem;
+        padding: .8rem 1.6rem
+    }
+
+    .searchOptions span {
+        font-size: 1.7rem;
+    }
+}
+
 /*----------Main---------*/
 
 .main {
@@ -368,10 +503,10 @@ input {
     position: absolute;
     content: '';
     background: var(--secondaryColor);
-    height: .5rem;
-    width: 12rem;
+    height: .4rem;
+    width: 12.3rem;
     right: 0;
-    bottom: .3rem;
+    bottom: .1rem;
     z-index: -1;
 }
 
@@ -490,6 +625,34 @@ input {
     font-size: 1.8rem;
 }
 
+@media screen and (min-width: 500px) {
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .title::after {
+        width: 15.5rem;
+    }
+
+    .secContent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .secContent .singleDestination {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .secContent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .secContent .singleDestination {
+        height: auto;
+    }
+}
+
 /*----------Footer---------*/
 
 .footer {
@@ -568,11 +731,12 @@ input {
     outline: none;
     background: transparent;
     color: var(--whiteColor);
+    font-size: 1.6rem;
 }
 
 .inputDiv input::placeholder {
     color: var(--whiteColor);
-    opacity: .5;
+    opacity: .8;
 }
 
 .inputDiv .btn {
@@ -581,11 +745,11 @@ input {
     color: var(--whiteColor);
     font-weight: 500;
     gap: .8rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .inputDiv .btn .icon {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .footerCard {
@@ -690,5 +854,82 @@ input {
 .footerDiv p {
     font-size: 1rem;
     color: var(--whiteColor);
+}
+
+@media screen and (min-width: 500px) {
+    .footerCard .footerLinks {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 1.6rem;
+    }
+
+    .footerDiv p {
+        font-size: 1.4rem;
+        color: var(--whiteColor);
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .secContent .contactDiv {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contactDiv .inputDiv {
+        width: max-content;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .inputDiv input {
+        width: 60%;
+    }
+
+    .inputDiv .btn {
+        width: max-content;
+    }
+}
+
+@media screen and (min-width: 840px) {
+    .footer {
+        padding: 8rem 0;
+    }
+
+    .secContent .footerCard {
+        flex-direction: row;
+    }
+
+    .footerCard .footerLinks {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 1.6rem;
+    } 
+}
+
+@media screen and (min-width: 1024px) {
+    .secContent .footerCard {
+        padding: 4.8rem 1.6rem;
+    }
+
+    .footerIntro .footerParagraph {
+        font-size: 1.5rem;
+        color: var(--textColor);
+    }
+
+    .footerIntro .footerSocials {
+        column-gap: .8rem;
+    }
+
+    .footerSocials .icon {
+        color: var(--textColor);
+        font-size: 2.5rem;
+    }
+
+    .footerSocials .icon:hover {
+        color: var(--primaryColor);
+    }
+
+    .linkGroup .footerList {
+        font-size: 1.6rem;
+        padding: .5rem 0;
+    }
 }
 

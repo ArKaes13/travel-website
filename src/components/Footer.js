@@ -66,7 +66,8 @@ function Footer() {
                             <FaTripadvisor className='icon' />
                         </div>
 
-                        <div className='footerLinks grid'>
+                    </div>
+                    <div className='footerLinks grid'>
                             <div data-aos='fade-up' data-aos-duration='3000' className='linkGroup'>
                                 <span className='groupTitle'>
                                     Our Agency
@@ -160,7 +161,6 @@ function Footer() {
                                 </li>
                             </div>
                         </div>
-                    </div>
 
                     <div className='footerDiv flex'>
                         <p dangerouslySetInnerHTML={{ __html: copyright() }}></p>
