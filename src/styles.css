@@ -250,7 +250,7 @@ input {
 
 .textDiv .homeTitle {
     position: relative;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
 }
 
 .cardDiv {
@@ -361,6 +361,7 @@ input {
     color: var(--textColor);
     margin: 1.6rem 0;
     z-index: 2;
+    font-size: 2.2rem;
 }
 
 .secTitle .title::after {
@@ -370,7 +371,7 @@ input {
     height: .5rem;
     width: 12rem;
     right: 0;
-    bottom: .5rem;
+    bottom: .3rem;
     z-index: -1;
 }
 
@@ -487,5 +488,207 @@ input {
 .btn .icon {
     align-self: center;
     font-size: 1.8rem;
+}
+
+/*----------Footer---------*/
+
+.footer {
+    width: 100%;
+    position: relative;
+    padding: 3.2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+}
+
+.footer .videoDiv {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.videoDiv video {
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoDiv::after {
+    content: '';
+    position: absolute;
+    background: rgba(10, 84, 107, .307);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    mix-blend-mode: multiply;
+}
+
+.footer .secContent {
+    width: 100%;
+    height: max-content;
+    padding: 3.2rem initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    row-gap: 3.2rem;
+    z-index: 100;
+}
+
+.secContent .contactDiv {
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.text small{
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--whiteColor);
+}
+
+.text h2{
+    color: var(--whiteColor);
+    font-size: 3rem;
+}
+
+.contactDiv .inputDiv {
+    width: 100%;
+    gap: 1.6rem;
+    flex-direction: column;
+}
+
+.inputDiv input {
+    width: 100%;
+    padding: .8rem 1rem;
+    border-radius: 4.8rem;
+    border: .1rem solid var(--whiteColor);
+    outline: none;
+    background: transparent;
+    color: var(--whiteColor);
+}
+
+.inputDiv input::placeholder {
+    color: var(--whiteColor);
+    opacity: .5;
+}
+
+.inputDiv .btn {
+    width: 100%;
+    justify-content: center;
+    color: var(--whiteColor);
+    font-weight: 500;
+    gap: .8rem;
+    font-size: 1.8rem;
+}
+
+.inputDiv .btn .icon {
+    font-size: 1.8rem;
+}
+
+.footerCard {
+    position: relative;
+    padding: 1.6rem 1.6rem 6.4rem;
+    gap: 3.2rem;
+    border-radius: 1.6rem;
+    background: var(--bodyColor);
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.footerIntro {
+    flex-basis: 50%;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: .8rem;
+}
+
+.footerCard .logoDiv .logo {
+    color: var(--blackColor);
+    font-weight: 600;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerCard .logoDiv .logo .icon {
+    font-size: 2.5rem;
+    color: var(--primaryColor);
+    margin: 0 1rem 0 0;
+    transform: translateY(-.1rem);
+}
+
+.footerCard .footerParagraph {
+    font-size: 1.3rem;
+    color: var(--textColor);
+}
+
+.footerCard .footerSocials {
+    display: flex;
+    gap: .8rem;
+}
+
+.footerCard .footerSocials .icon {
+    color: var(--blackColor);
+    font-size: 2rem;
+}
+
+.footerCard .footerSocials .icon:hover {
+    color: var(--primaryColor);
+}
+
+.footerCard .footerLinks {
+    flex-basis: 50%;
+    width: 100%;
+    gap: 1.6rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+}
+
+.linkGroup .groupTitle {
+    display: block;
+    font-weight: 600;
+    color: var(--blackColor);
+    margin: 0 0 .8rem 0;
+    font-size: 1.6rem;
+}
+
+.linkGroup .footerList {
+    font-size: 1.5rem;
+    color: var(--textColor);
+    transition: .3s ease-in-out;
+}
+
+.footerList .icon {
+    font-size: 1.5rem;
+    color: var(--greyText);
+}
+
+.footerList:hover {
+    color: var(--primaryColor);
+    transform: translateX(.7rem);
+}
+
+.footerList:hover > .icon {
+    color: var(--secondaryColor);
+}
+
+.footerDiv {
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--secondaryColor);
+    padding: .8rem 3.2rem;
+}
+
+.footerDiv p {
+    font-size: 1rem;
+    color: var(--whiteColor);
 }
 
